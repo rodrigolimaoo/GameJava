@@ -4,15 +4,13 @@ import java.awt.Graphics;
 import java.util.Random;
 import java.awt.Color;
 
-public class Player extends GameObject{
-	
+public class Player extends GameObject {
+
 	Random r = new Random();
 
 	public Player(int x, int y, ID id) {
 		super(x, y, id);
-		
-		velX = r.nextInt(5) + 1;
-		velY = r.nextInt(5);
+
 	}
 
 	@Override
@@ -23,10 +21,13 @@ public class Player extends GameObject{
 
 	@Override
 	public void render(Graphics g) {
-		g.setColor(Color.white);
-		g.fillRect(x,y,32,32);
-		
-		
+		if (id == ID.Player) {
+			g.setColor(Color.white);
+		} else {
+			g.setColor(Color.blue);
+		}
+		g.fillRect(x, y, 32, 32);
+
 	}
 
 }
