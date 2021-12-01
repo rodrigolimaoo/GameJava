@@ -2,6 +2,6 @@ package com.main;
 
 public enum ID {
 
-	Player(), BasicEnemy();
+	Player(), Trail(), BasicEnemy();
 
 }
