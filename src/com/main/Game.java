@@ -51,7 +51,7 @@ public class Game extends Canvas implements Runnable {
 
 	@Override
 	public void run() {
-		this.requestFocus(); // autoclick and run of the game to use keyinput
+		this.requestFocus(); // auto-click and run of the game to use keyinput
 		long lastTime = System.nanoTime();
 		double amountOfTicks = 60.0;
 		double ns = 1000000000 / amountOfTicks;
