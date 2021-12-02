@@ -114,7 +114,7 @@ public class Game extends Canvas implements Runnable {
 	 * Method to set boundaries for objects
 	 */
 
-	public static int clamp(int var, int min, int max) {
+	public static float clamp(float var, float min, float max) {
 		if (var >= max) {
 			return var = max;
 		} else if (var <= min) {

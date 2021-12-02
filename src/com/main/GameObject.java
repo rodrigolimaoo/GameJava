@@ -1,55 +1,65 @@
 package com.main;
+
 import java.awt.Graphics;
 import java.awt.Rectangle;
 
 public abstract class GameObject {
 
-	protected int x,y;
-	
+	protected float x, y;
+
 	protected ID id;
-	protected int velX, velY;
-	public int getX() {
+	protected float velX, velY;
+
+	public float getX() {
 		return x;
 	}
-	
-	public GameObject(int x, int y, ID id) {
+
+	public GameObject(float x, float y, ID id) {
 		this.x = x;
 		this.y = y;
 		this.id = id;
 	}
-	
+
 	public abstract void tick();
-	public abstract void render (Graphics g);
+
+	public abstract void render(Graphics g);
+
 	public abstract Rectangle getBounds();
-	
-	public void setX(int x) {
+
+	public void setX(float x) {
 		this.x = x;
 	}
-	public int getY() {
+
+	public float getY() {
 		return y;
 	}
-	public void setY(int y) {
+
+	public void setY(float y) {
 		this.y = y;
 	}
+
 	public ID getId() {
 		return id;
 	}
+
 	public void setId(ID id) {
 		this.id = id;
 	}
-	public int getVelX() {
+
+	public float getVelX() {
 		return velX;
 	}
-	public void setVelX(int velX) {
+
+	public void setVelX(float velX) {
 		this.velX = velX;
 	}
-	public int getVelY() {
+
+	public float getVelY() {
 		return velY;
 	}
-	public void setVelY(int velY) {
+
+	public void setVelY(float velY) {
 		this.velY = velY;
 	}
-	
-	
-	
+
 }
